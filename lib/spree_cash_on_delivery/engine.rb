@@ -14,10 +14,8 @@ module SpreeCash0nDelivery
 
     end
 
-    initializer "spree.register.payment_methods" do |app|
-      app.config.spree.payment_methods += [
-          Spree::PaymentMethod::CashOnDelivery
-      ]
+    config.after_initialize do |app|
+      app.config.spree.payment_methods << ::Spree::PaymentMethod::CashOnDelivery
     end
 
     config.to_prepare &method(:activate).to_proc
