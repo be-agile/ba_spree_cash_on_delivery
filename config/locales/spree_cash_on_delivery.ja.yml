@@ -1,0 +1,14 @@
+ja:
+  cash_on_delivery:
+    views:
+      payment:
+        description: "商品受け取り時に代金をお支払いいただきます"
+        concept: "注文番号"
+        amount: "注文金額"
+        extra: "代引き手数料として%{extra}円が別途かかります。"
+      admin:
+        advice: "代引き"
+        total: "代引き手数料：%{extra}円"
+        orders:
+          extra: "代引き手数料の追加が必要です"
+    label: "代引き手数料"
