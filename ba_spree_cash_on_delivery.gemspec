@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'ba_spree_cash_on_delivery'
-  s.version     =  '4.0.0'
+  s.version     =  '4.0.1'
   s.summary     = 'Payment Method Cash On Delivery (Be-Agile fork)'
   s.description = 'Payment Method Cash On Delivery supporting Ruby 3.1, Rails 7.1 and Spree 4.10'
   s.author      = 'be agile Co., Ltd.'
