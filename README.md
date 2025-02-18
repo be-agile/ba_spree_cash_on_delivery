@@ -42,4 +42,4 @@ This extension is available as open source under the terms of either:
 ## Credits
 
 Originally created by Pablo Torre (2016).
-Fork maintained by [Your Name/Organization].
+Fork maintained by [be agile Co., Ltd.](https://be-agile.jp/).
