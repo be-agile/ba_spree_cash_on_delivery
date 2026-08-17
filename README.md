@@ -6,9 +6,9 @@ This is a fork of [spree_cash_on_delivery](https://github.com/sylvinho81/spree_c
 
 ## Features
 
-* Supports Ruby 3.1
-* Supports Rails 7.1
-* Supports Spree 4.10
+* Supports Ruby 3.3
+* Supports Rails 7.2
+* Supports Spree 5.3.6
 * Japanese translations included
 * Actively maintained with contributions back to the original project
 
@@ -22,11 +22,6 @@ gem 'ba_spree_cash_on_delivery'
 2. Install the gem:
 ```bash
 bundle install
-```
-
-3. Run the installer:
-```bash
-bundle exec rails g spree_cash_on_delivery:install
 ```
 
 ## Development

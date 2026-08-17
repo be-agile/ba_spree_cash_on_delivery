@@ -6,9 +6,20 @@ ja:
         concept: "注文番号"
         amount: "注文金額"
         extra: "代引き手数料として%{extra}円が別途かかります。"
+        extra_service_fee_info: "サービス手数料%{extra}が別途かかります。"
       admin:
         advice: "代引き"
         total: "代引き手数料：%{extra}円"
         orders:
           extra: "代引き手数料の追加が必要です"
     label: "代引き手数料"
+    service_fee_label: "代金引換サービス手数料"
+
+    fee_settings: '代引き手数料設定'
+    tier_number: '段階'
+    order_amount_up_to: '注文金額上限 (円)'
+    fee_amount: '手数料 (円)'
+    max_fee_label: '最大手数料'
+    max_fee_hint: 'すべての金額帯を超える注文に適用'
+    fee_tiers_explanation: '注文金額に応じた代引き手数料を設定します。各段階で、「その金額以下」の注文に適用される手数料を指定してください。'
+    fee_tiers_info: '金額は小さい順に設定してください。使用しない段階は空欄のままか、前の段階と同じ値を設定してください。'

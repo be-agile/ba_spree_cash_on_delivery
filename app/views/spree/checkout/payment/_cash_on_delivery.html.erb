@@ -1,10 +1,10 @@
 <div class="payment_type">
   <p><%= t('cash_on_delivery.views.payment.description').html_safe %></p>
-  <blockquote>
-    <p><strong><%= t('cash_on_delivery.views.payment.concept') %></strong>: <%= @order.number %></p>
-    <p><strong><%= t('cash_on_delivery.views.payment.amount') %></strong>: <%= @order.display_total %></p>
-    <% if payment_method.preferred_fee.present? %>
-        <p><strong><%= t('cash_on_delivery.views.payment.extra', :extra => "#{payment_method.preferred_fee}") %></strong>
-    <% end %>
-  </blockquote>
+  <% service_fee = payment_method.calculate_service_fee(@order) %>
+
+  <% if service_fee.present? %>
+    <blockquote>
+      <p><strong><%= t('cash_on_delivery.views.payment.extra_service_fee_info', extra: Spree::Money.new(service_fee).to_s) %></strong></p>
+    </blockquote>
+  <% end %>
 </div>
