@@ -16,7 +16,10 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/be-agile/ba_spree_cash_on_delivery'
   s.licenses    = ['AGPL-3.0-or-later']
 
-  s.files        = `git ls-files`.split("\n")
+  # `git ls-files` を使わない: フォーク元やリネーム前の古いファイルが git 上に残っていると、
+  # 削除漏れがあった場合にそれらも巻き込んでパッケージしてしまう(#1317 で実際に発生した不具合)。
+  # 明示的な Dir[] にすることで、実際にディスク上にある現行ファイルだけをパッケージする。
+  s.files        = Dir['LICENSE', 'README.md', 'Gemfile', 'app/**/*', 'config/**/*', 'lib/**/*', 'db/**/*']
   s.require_path = 'lib'
   s.requirements << 'none'
 
