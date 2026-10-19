@@ -16,10 +16,11 @@ module SpreeCashOnDelivery
     def adjust_cod_fee
       return if payments_attributes.blank?
 
-      destroy_cod_fee_adjustments
-      payment_method = find_cod_payment_method
-      create_cod_fee_adjustment!(payment_method)
-      updater.update
+      destroyed = destroy_cod_fee_adjustments
+      created = create_cod_fee_adjustment!(find_cod_payment_method)
+      # 支払い金額は直後に注文合計から決まるので、手数料を付け外ししたら合計を更新しておく。
+      # 付け外しが無ければ合計は変わらないので、重い再計算を省く(#1390)
+      updater.update if destroyed.any? || created
     end
 
     def find_cod_payment_method
